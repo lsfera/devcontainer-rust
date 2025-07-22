@@ -1,0 +1,6 @@
+{
+    "evenBetterToml.schema.links": true,
+    "evenBetterToml.formatter.alignEntries": true,
+    "rust-analyzer.restartServerOnConfigChange": true
+
+}

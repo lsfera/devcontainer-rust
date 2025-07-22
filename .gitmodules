@@ -1,0 +1,9 @@
+[submodule "async-rust-oreilly"]
+	path = async-rust-oreilly
+	url = https://github.com/maxwellflitton/async-rust-oreilly
+[submodule "code-like-a-pro-in-rust-book"]
+	path = code-like-a-pro-in-rust-book
+	url = https://github.com/brndnmtthws/code-like-a-pro-in-rust-book
+[submodule "idiomatic-rust-book"]
+	path = idiomatic-rust-book
+	url = https://github.com/brndnmtthws/idiomatic-rust-book
