@@ -7,3 +7,6 @@
 [submodule "idiomatic-rust-book"]
 	path = idiomatic-rust-book
 	url = https://github.com/brndnmtthws/idiomatic-rust-book
+[submodule "scoutforall"]
+	path = scoutforall
+	url = https://github.com/lsfera/scoutforall
