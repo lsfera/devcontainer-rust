@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/devcontainers/rust:1-1-bookworm
+FROM mcr.microsoft.com/devcontainers/rust:bookworm
 
 COPY ./certs/ /usr/local/share/ca-certificates/
 RUN sudo update-ca-certificates

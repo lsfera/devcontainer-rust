@@ -9,4 +9,4 @@
 	url = https://github.com/brndnmtthws/idiomatic-rust-book
 [submodule "scoutforall"]
 	path = scoutforall
-	url = https://github.com/lsfera/scoutforall
+	url = https://github.com/lsfera/scoutforall.git
