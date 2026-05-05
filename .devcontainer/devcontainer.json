@@ -14,13 +14,14 @@
 				"tamasfe.even-better-toml",
 				"rust-lang.rust-analyzer",
 				"vadimcn.vscode-lldb",
-				"Gruntfuggly.todo-tree"
+				"Gruntfuggly.todo-tree",
+				"GitHub.copilot",
+				"GitHub.copilot-chat"
 			]
 		}
 	},
 	"forwardPorts": [
-		5050,
-		16686
+		5000
 	],
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},

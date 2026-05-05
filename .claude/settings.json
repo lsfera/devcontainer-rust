@@ -1,0 +1,15 @@
+{
+  "extraKnownMarketplaces": {
+    "thedotmack-claude-mem": {
+      "source": "github",
+      "repo": "thedotmack/claude-mem"
+    }
+  },
+  "enabledPlugins": {
+    "plugin@thedotmack-claude-mem": true
+  },
+  "attribution": {
+    "commit": "",
+    "pr": ""
+    }
+}

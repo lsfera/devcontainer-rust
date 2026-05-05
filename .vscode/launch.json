@@ -7,11 +7,19 @@
         {
             "type": "lldb",
             "request": "launch",
-            "name": "Debug",
+            "name": "Debug Rust Program",
             "cargo": {
-                "args": ["build", "--manifest-path", "${fileDirname}/../Cargo.toml"]
-            }
+                "args": [
+                    "build",
+                    "--manifest-path",
+                    "${fileDirname}/../Cargo.toml"
+                ]
+            },
+            "env": {
+                "POKEAPI_HOST": "pokeapi.co",
+                "FUN_TRANSLATIONS_HOST": "api.funtranslations.com",
+                "PORT": "8000"
+            },
         }
     ]
 }
-
