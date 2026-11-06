@@ -1,33 +1,38 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/rust-postgres
 {
-	"name": "Rust and PostgreSQL",
+	"name": "Rust",
 	"dockerComposeFile": "docker-compose.yml",
 	"service": "app",
 	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
 	"features": {
-		"ghcr.io/devcontainers/features/docker-outside-of-docker:1.6.5": {}
+		"ghcr.io/devcontainers/features/docker-outside-of-docker:1.10.1": {
+			"moby": false
+		},
+		"ghcr.io/devcontainers/features/node:2.1.1": {}
 	},
 	"customizations": {
 		"vscode": {
 			"extensions": [
+				"Anthropic.claude-code",
 				"tamasfe.even-better-toml",
 				"rust-lang.rust-analyzer",
 				"vadimcn.vscode-lldb",
 				"Gruntfuggly.todo-tree",
-				"GitHub.copilot",
-				"GitHub.copilot-chat"
+				"streetsidesoftware.code-spell-checker",
+				"ms-azuretools.vscode-containers"
 			]
 		}
+	},
+	"containerEnv": {
+		"DOCKER_MCP_IN_CONTAINER": "1"
 	},
 	"forwardPorts": [
 		5000
 	],
-	// Features to add to the dev container. More info: https://containers.dev/features.
-	// "features": {},
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "sudo apt-get update && sudo apt-get install -y binutils lld && which ld && which ld.lld"
+	"onCreateCommand": "sudo mkdir -p /home/vscode/.cargo/registry /home/vscode/.cargo/git && sudo chown -R vscode:vscode /home/vscode/.cargo",
+	"postCreateCommand": "sudo apt-get update && sudo apt-get install -y binutils lld ripgrep && which ld && which ld.lld && . \"$NVM_DIR/nvm.sh\" && nvm install --lts && curl -fsSL https://raw.githubusercontent.com/rtk-ai/rtk/refs/heads/master/install.sh | sh && mkdir -p ~/.docker/cli-plugins && curl -fsSL https://github.com/docker/mcp-gateway/releases/download/v0.44.1/docker-mcp-linux-$(dpkg --print-architecture).tar.gz | tar -xz -C ~/.docker/cli-plugins docker-mcp"
 	// Configure tool-specific properties.
 	// "customizations": {},
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.

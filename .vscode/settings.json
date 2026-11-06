@@ -2,9 +2,24 @@
     "evenBetterToml.schema.links": true,
     "evenBetterToml.formatter.alignEntries": true,
     "rust-analyzer.restartServerOnConfigChange": true,
+    "rust-analyzer.linkedProjects": [
+        "pdf-extractor/lambda/Cargo.toml"
+    ],
+    "rust-analyzer.cargo.features": [
+        "lambda"
+    ],
     "lldb.displayFormat": "auto",
     "lldb.showDisassembly": "auto",
     "lldb.dereferencePointers": true,
-    "lldb.consoleMode": "commands"
-
+    "lldb.consoleMode": "commands",
+    "github.copilot.chat.agent.autoFix": true,
+    "github.copilot.chat.alternateGeminiModelFPrompt.enabled": true,
+    "github.copilot.chat.alternateGptPrompt.enabled": true,
+    "github.copilot.chat.anthropic.tools.websearch.enabled": true,
+    "github.copilot.chat.anthropic.useMessagesApi": true,
+    "github.copilot.chat.codesearch.enabled": true,
+    "github.copilot.chat.completionsFetcher": "electron-fetch",
+    "github.copilot.chat.generateTests.codeLens": true,
+    "chat.extensionUnification.enabled": false,
+    "todo-tree.ripgrep.ripgrep": "/usr/bin/rg"
 }

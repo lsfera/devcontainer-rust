@@ -1,11 +1,12 @@
 services:
   app:
-    image: mcr.microsoft.com/devcontainers/rust:bookworm
+    image: mcr.microsoft.com/devcontainers/rust:trixie
 
     volumes:
-      - ../..:/workspaces:cached
-      - /var/run/docker.sock:/var/run/docker.sock
-  
+      - ..:/workspaces/devcontainer-rust:cached
+      - cargo-registry:/home/vscode/.cargo/registry
+      - cargo-git:/home/vscode/.cargo/git
+
     # Overrides default command so things don't shut down after the process ends.
     command: sleep infinity
     # Use "forwardPorts" in **devcontainer.json** to forward an app port locally.
@@ -13,4 +14,8 @@ services:
 networks:
   default:
     attachable: true
-    name: devcontainer_network
+    name: devcontainer-rust_network
+
+volumes:
+  cargo-registry:
+  cargo-git:

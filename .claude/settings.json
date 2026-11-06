@@ -1,4 +1,22 @@
 {
+  "permissions": {
+    "allow": [
+      "Bash(cargo test *)"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "rtk hook claude"
+          }
+        ]
+      }
+    ]
+  },
   "extraKnownMarketplaces": {
     "thedotmack-claude-mem": {
       "source": "github",
@@ -11,5 +29,5 @@
   "attribution": {
     "commit": "",
     "pr": ""
-    }
+  }
 }
